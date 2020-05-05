@@ -47,6 +47,7 @@ const archiveMessages = [
       message: 'Игра началась',
       date: new Date(),
     }),
+    id: uuid.v4()
   }
 ];
 
@@ -85,6 +86,7 @@ const intervals = setInterval(() => {
   const newMessage = {
     event: 'gameReport',
     data: JSON.stringify(newMessageData),
+    id: uuid.v4()
   };
 
   archiveMessages.push(newMessage);
